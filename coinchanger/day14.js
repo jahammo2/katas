@@ -10,11 +10,6 @@ function createChange (num) {
   coins(r, 5);
   r = r % 5;
   coins(r, 1);
-  
-
-
-
-
   return c;
 }
 
@@ -34,3 +29,4 @@ console.log(createChange(10));
 console.log(createChange(5));
 console.log(createChange(1));
 console.log(createChange(0));
+
