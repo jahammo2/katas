@@ -10,11 +10,6 @@ function createChange (num) {
   coins(r, 5);
   r = r % 5;
   coins(r, 1);
-  
-
-
-
-
   return c;
 }
 
