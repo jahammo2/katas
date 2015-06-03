@@ -93,3 +93,9 @@ class RomanNumeralChanger
 
 
 end
+
+# next time
+# << with strings instead of array
+# store in an object
+# divmod
+# use self (e.g. 152.to_roman)
