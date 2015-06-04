@@ -7,11 +7,10 @@
 
 
 class RomanNumeralChanger
-  # attr_reader @numerals_store
-  #
-  # def initialize
-  #   @numerals_store
-  # end
+
+  def initialize
+    @letters = ''
+  end
 
   def numerals_store 
     {
@@ -27,14 +26,19 @@ class RomanNumeralChanger
   }
   end
   
-  def create_letter(num) 
-    letters = ''
+  def create_letter(chosen_number) 
+    @letters = ''
+    choose_letters(chosen_number)
+    @letters
+  end
+
+  def choose_letters(num)
     numerals_store.each do |key, value|
       quotient, modulus = num.divmod(key)
-      letters << value * quotient if quotient >= 1
+      @letters << value * quotient if quotient >= 1
       num = modulus
     end
-    letters
   end
 
 end
+
