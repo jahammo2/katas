@@ -8,11 +8,9 @@
 
 class RomanNumeralChanger
 
-  def initialize
-    @letters = ''
-  end
+  attr_accessor :letters
 
-  def numerals_store 
+  def numerals_store
     {
     100 => 'C',
     90 => 'XC',
@@ -23,19 +21,19 @@ class RomanNumeralChanger
     5 => 'V',
     4 => 'IV',
     1 => 'I'
-  }
+    }
   end
-  
-  def create_letter(chosen_number) 
+
+  def create_letter(number)
     @letters = ''
-    choose_letters(chosen_number)
+    append_letters(number)
     @letters
   end
 
-  def choose_letters(num)
+  def append_letters(num)
     numerals_store.each do |key, value|
       quotient, modulus = num.divmod(key)
-      @letters << value * quotient if quotient >= 1
+      @letters << value * quotient 
       num = modulus
     end
   end
