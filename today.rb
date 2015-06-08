@@ -1,16 +1,6 @@
-# next time
-# << with strings instead of array
-# store in an object
-# divmod
-# use self (e.g. 152.to_roman)
-# make this an actual "game"
-
-
 class RomanNumeralChanger
 
-  attr_accessor :letters
-
-  def numerals_store
+  def numerals
     {
     100 => 'C',
     90 => 'XC',
@@ -24,18 +14,14 @@ class RomanNumeralChanger
     }
   end
 
-  def create_letter(number)
-    @letters = ''
-    append_letters(number)
-    @letters
-  end
-
-  def append_letters(num)
-    numerals_store.each do |key, value|
+  def create_letter(num)
+    letters = ''
+    numerals.each do |key, value|
       quotient, modulus = num.divmod(key)
-      @letters << value * quotient 
+      letters << value * quotient
       num = modulus
     end
+    letters
   end
 
 end
