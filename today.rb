@@ -1,10 +1,10 @@
 class RomanNumeralChanger
 
   def start
-    puts "which number do you choose?"
+    puts "what number are you converting?"
     puts create_letter(gets.chomp)
   end
-  
+
   def numerals
     {
     100 => 'C',
