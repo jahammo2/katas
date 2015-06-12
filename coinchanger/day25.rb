@@ -1,7 +1,7 @@
 class RomanNumeralChanger
 
   def start
-    puts "what number are you converting?"
+    puts "which number do you want to Roman?"
     puts create_letter(gets.chomp)
   end
 
@@ -102,7 +102,7 @@ describe RomanNumeralChanger do
   end
 
   it "gives a '' if the numeral is 0" do
-   expect(roman_numeral_changer.create_letter(0)).to eq('')
+    expect(roman_numeral_changer.create_letter(0)).to eq('')
   end
 end
 

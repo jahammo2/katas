@@ -1,7 +1,7 @@
 class RomanNumeralChanger
 
   def start
-    puts "what number are you converting?"
+    puts "which number do you want to Roman?"
     puts create_letter(gets.chomp)
   end
 
