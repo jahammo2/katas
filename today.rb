@@ -1,12 +1,6 @@
 class RomanNumeralChanger
-
-  def start
-    puts "which number do you want to Roman?"
-    puts create_letter(gets.chomp)
-  end
-
   def numerals
-    {
+  {
     100 => 'C',
     90 => 'XC',
     50 => 'L',
@@ -16,11 +10,10 @@ class RomanNumeralChanger
     5 => 'V',
     4 => 'IV',
     1 => 'I'
-    }
+  }
   end
 
-  def create_letter(num)
-    num = num.to_i
+  def create_letter (num)
     letters = ''
     numerals.each do |key, value|
       quotient, modulus = num.divmod(key)
@@ -29,8 +22,4 @@ class RomanNumeralChanger
     end
     letters
   end
-
 end
-
-rnc = RomanNumeralChanger.new
-rnc.start
