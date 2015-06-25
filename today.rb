@@ -1,6 +1,7 @@
 class RomanNumeralChanger
+
   def numerals
-  {
+    {
     100 => 'C',
     90 => 'XC',
     50 => 'L',
@@ -10,7 +11,7 @@ class RomanNumeralChanger
     5 => 'V',
     4 => 'IV',
     1 => 'I'
-  }
+    }
   end
 
   def create_letter (num)
@@ -22,4 +23,5 @@ class RomanNumeralChanger
     end
     letters
   end
+
 end
