@@ -1,6 +1,6 @@
 class RomanNumeralChanger
 
-  def numerals
+  def numeral
     {
     100 => 'C',
     90 => 'XC',
@@ -10,13 +10,13 @@ class RomanNumeralChanger
     9 => 'IX',
     5 => 'V',
     4 => 'IV',
-    1 => 'I'
+    1 => 'I',
     }
   end
 
   def create_letter (num)
     letters = ''
-    numerals.each do |key, value|
+    numeral.each do |key, value|
       quotient, modulus = num.divmod(key)
       letters << value * quotient
       num = modulus
